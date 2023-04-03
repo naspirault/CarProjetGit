@@ -1,7 +1,6 @@
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.*;
-import java.io.File;
-import java.io.FileNotFoundException;
+
 import static java.util.Comparator.comparing;
 public class Main {
 
@@ -9,7 +8,7 @@ public class Main {
         //Création d'objet selon les besoins
         Scanner sc = new Scanner(System.in);
         //Tableau dynamique de Car
-        ArrayList< Car > arrayOfCar = new ArrayList< Car >();
+        ArrayList< Car > arrayOfCar = new ArrayList<>();
         //Variables pour la lecture des infos au clavier
         String brand, model, color, isElec;
         //int doors;
@@ -71,13 +70,13 @@ public class Main {
            int elec = readInteger(msgElectric,1,2);
            //if (isElec.equalsIgnoreCase("oui")) electric = true;
            //else electric = false;
-           if (elec == 1) electric = true; else electric=false;
+           electric = elec == 1;
 
            //Création de l'objet Car avec les propriétés de l'objet
            Car carAjout = new Car(brand, model, color, doors, electric);
            arrayOfCar.add(carAjout);
            String msgLoop = ("Voulez-vous continuer (YES/NO)? ");
-            loop = YesNo(msgLoop);
+           loop = YesNo(msgLoop);
        }
 
      /*   System.out.println("\nAffichage du array avec un forEach");
@@ -103,7 +102,7 @@ public class Main {
                // System.out.println(data);
                // data = data.replaceAll("\"", "");
                 //System.out.println(data);
-                String split[] = data.split(",", 0);
+                String[] split = data.split(",", 0);
                 int nb = Integer.parseInt(split[3]);
                 boolean electBool = Boolean.parseBoolean(split[4]);
                 arrayOfCar.add(new Car(split[0],split[1],split[2],nb,electBool));
@@ -124,12 +123,11 @@ public class Main {
                         .thenComparing(Car::getIsElectric)      // et par electrique
         );
 
-        try(PrintWriter out = new PrintWriter("test2.txt")) {
+        try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("ListOfCars.txt",true)))) {
             for(Car element : arrayOfCar) {
                 out.println(element);
             }
-            out.close();
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
         arrayOfCar.forEach(System.out::println);
