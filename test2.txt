@@ -1,0 +1,10 @@
+Voiture { marque = 'Ford', modèle = 'F-150', couleur = 'blanc', nombre de portes = 2, est électrique = false }
+Voiture { marque = 'Honda', modèle = 'CR-V', couleur = 'rouge', nombre de portes = 5, est électrique = false }
+Voiture { marque = 'Honda', modèle = 'Civic', couleur = 'rouge', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'Honda', modèle = 'Civic', couleur = 'noire', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'rouge', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'gris', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'Toyota', modèle = 'Echo', couleur = 'noire', nombre de portes = 3, est électrique = true }
+Voiture { marque = 'asd', modèle = 'asd', couleur = 'asd', nombre de portes = 2, est électrique = true }
+Voiture { marque = 'qwww', modèle = 'qwqw', couleur = 'qwqwq', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'wwww', modèle = 'wwww', couleur = 'wwww', nombre de portes = 3, est électrique = false }
