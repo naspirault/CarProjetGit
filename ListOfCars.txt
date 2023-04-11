@@ -7,3 +7,27 @@ Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'rouge', nombre de p
 Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'gris', nombre de portes = 4, est électrique = true }
 Voiture { marque = 'Toyota', modèle = 'Echo', couleur = 'noire', nombre de portes = 3, est électrique = true }
 Voiture { marque = 'mitsu', modèle = 'lancer', couleur = 'rouge', nombre de portes = 2, est électrique = true }
+Voiture { marque = 'Ford', modèle = 'F-150', couleur = 'blanc', nombre de portes = 2, est électrique = false }
+Voiture { marque = 'Honda', modèle = 'CR-V', couleur = 'rouge', nombre de portes = 5, est électrique = false }
+Voiture { marque = 'Honda', modèle = 'Civic', couleur = 'rouge', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'Honda', modèle = 'Civic', couleur = 'noire', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'rouge', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'gris', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'Toyota', modèle = 'Echo', couleur = 'noire', nombre de portes = 3, est électrique = true }
+Voiture { marque = 'toyo', modèle = 'tundra', couleur = 'beige', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'Toyota', modèle = 'Echo', couleur = 'La voiture est noire', nombre de portes = 3, est électrique = true }
+Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'La voiture est rouge', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'Honda', modèle = 'Civic', couleur = 'La voiture est rouge', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'sdfsdf', modèle = 'sdfs', couleur = 'La voiture est blanche', nombre de portes = 3, est électrique = true }
+Voiture { marque = 'Honda', modèle = 'Civic', couleur = 'La voiture est noire', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'Honda', modèle = 'CR-V', couleur = 'La voiture est rouge', nombre de portes = 5, est électrique = false }
+Voiture { marque = 'Ford', modèle = 'F-150', couleur = 'La voiture est blanche', nombre de portes = 2, est électrique = false }
+Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'La voiture est grise', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'Ford', modèle = 'F-150', couleur = 'La voiture est blanche', nombre de portes = 2, est électrique = false }
+Voiture { marque = 'Honda', modèle = 'CR-V', couleur = 'La voiture est rouge', nombre de portes = 5, est électrique = false }
+Voiture { marque = 'Honda', modèle = 'Civic', couleur = 'La voiture est rouge', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'Honda', modèle = 'Civic', couleur = 'La voiture est noire', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'La voiture est rouge', nombre de portes = 4, est électrique = true }
+Voiture { marque = 'Toyota', modèle = 'Corolla', couleur = 'La voiture est grise', nombre de portes = 4, est électrique = false }
+Voiture { marque = 'Toyota', modèle = 'Echo', couleur = 'La voiture est noire', nombre de portes = 3, est électrique = true }
+Voiture { marque = 'sdf', modèle = 'sdf', couleur = 'La voiture est blanche', nombre de portes = 3, est électrique = true }

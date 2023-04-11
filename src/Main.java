@@ -10,16 +10,18 @@ public class Main {
         //Tableau dynamique de Car
         ArrayList< Car > arrayOfCar = new ArrayList<>();
         //Variables pour la lecture des infos au clavier
-        String brand, model, color, isElec;
+        String brand, model;
+        int color;
+        int isElec;
         //int doors;
         boolean electric;
         //Variable pour l'arrêt de la boucle
         String loop = "YES";
         int ok = 0;
         //Création de voitures
-        Car car1 = new Car("Toyota", "Echo", "noire", 3, true);
-        Car car2 = new Car("Toyota", "Corolla", "rouge",4,false);
-        Car car3 = new Car("Honda","Civic", "rouge",4,true);
+        Car car1 = new Car("Toyota", "Echo", Color.NOIRE, 3, true);
+        Car car2 = new Car("Toyota", "Corolla", Color.ROUGE,4,true);
+        Car car3 = new Car("Honda","Civic", Color.ROUGE,4,false);
         //Car carAjout = new Car();
         arrayOfCar.add(car1);
         arrayOfCar.add(car2);
@@ -59,21 +61,20 @@ public class Main {
            System.out.print("Entrez le modèle de la voiture: ");
            model = sc.next();
            System.out.print("Entrez la couleur de la voiture: ");
-           color = sc.next();
+           color = sc.nextInt();
            //Utilisation d'une fonction pour vérifier si le texte entré est entre 1 et 8
            String msg = "Entrez un nombre de portes: ";
            int doors = readInteger(msg, 2,10);
-
            //isElectric est un boolean donc il faut le transformer
-           String msgElectric = ("La voiture est électrique? 1-Oui/2-Non: ");
-           //isElec = sc.next();
+           String msgElectric = ("La voiture est électrique? 0-Oui/1-Non: ");
+           isElec = sc.nextInt();
            int elec = readInteger(msgElectric,1,2);
-           //if (isElec.equalsIgnoreCase("oui")) electric = true;
-           //else electric = false;
+           /*if (isElec.equalsIgnoreCase("oui")) electric = true;
+           else electric = false;*/
            electric = elec == 1;
 
            //Création de l'objet Car avec les propriétés de l'objet
-           Car carAjout = new Car(brand, model, color, doors, electric);
+           Car carAjout = new Car(brand, model, Color.values()[color], doors, electric);
            arrayOfCar.add(carAjout);
            String msgLoop = ("Voulez-vous continuer (YES/NO)? ");
            loop = YesNo(msgLoop);
@@ -93,7 +94,7 @@ public class Main {
         System.out.println("Après le remove()");
         */
 
-     //   arrayOfCar.forEach(System.out::println);
+        arrayOfCar.forEach(System.out::println);
         try {
             File myObj = new File("fileOfCars2");
             Scanner myReader = new Scanner(myObj);
@@ -104,8 +105,9 @@ public class Main {
                 //System.out.println(data);
                 String[] split = data.split(",", 0);
                 int nb = Integer.parseInt(split[3]);
+                int nb2 = Integer.parseInt(split[4]);
                 boolean electBool = Boolean.parseBoolean(split[4]);
-                arrayOfCar.add(new Car(split[0],split[1],split[2],nb,electBool));
+                arrayOfCar.add(new Car(split[0],split[1],Color.valueOf(split[2]),nb,electBool));
             }
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -116,11 +118,11 @@ public class Main {
         // Collections.sort(arrayOfCar, new SortByBrand());
 
         //Trier le tableau
-        System.out.println("\nTrier par marque, modèle et est électrique");
+       // System.out.println("\nTrier par marque, modèle et est électrique");
         arrayOfCar.sort(
                 comparing(Car::getBrand)                   // comparer par marque
                         .thenComparing(Car::getModel)         // puis par modele
-                        .thenComparing(Car::getIsElectric)      // et par electrique
+                  //      .thenComparing(Car::getIsElectric)      // et par electrique
         );
 
         try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("ListOfCars.txt",true)))) {
