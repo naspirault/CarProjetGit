@@ -9,4 +9,8 @@ public enum Color {
     Color (String color){
         this.msg=color;
     }
+
+    public String getMsg() {
+        return msg;
+    }
 }
